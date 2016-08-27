@@ -20,57 +20,57 @@
       <scope>test</scope>
     </dependency>
 
-<!-- spring核心包 -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
+	<!-- spring核心包 -->
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-core</artifactId>
+           <version>${spring.version}</version>
+       </dependency>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-oxm</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-tx</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-web</artifactId>
+           <version>${spring.version}</version>
+       </dependency>
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-oxm</artifactId>
+           <version>${spring.version}</version>
+       </dependency>
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-tx</artifactId>
+           <version>${spring.version}</version>
+       </dependency>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-jdbc</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-jdbc</artifactId>
+           <version>${spring.version}</version>
+       </dependency>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-aop</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-webmvc</artifactId>
+           <version>${spring.version}</version>
+       </dependency>
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-aop</artifactId>
+           <version>${spring.version}</version>
+       </dependency>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context-support</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-context-support</artifactId>
+           <version>${spring.version}</version>
+       </dependency>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-test</artifactId>
+           <version>${spring.version}</version>
+       </dependency>
 
 
     <!-- 引入Dubbo依赖 -->
@@ -78,6 +78,7 @@
             <groupId>com.alibaba</groupId>
             <artifactId>dubbo</artifactId>
             <version>2.5.3</version>
+              <!-- 因为dubbo自带的spring2.5和上面的spring会有冲突，所以指定一下spring -->
               <exclusions>  
 			   <exclusion>  
 			    <artifactId>spring</artifactId>  
@@ -96,7 +97,16 @@
          <groupId>com.github.sgroschupf</groupId>
          <artifactId>zkclient</artifactId>
          <version>0.1</version>
-      </dependency>
+    </dependency>
+    
+     <!-- 引入Dubbo接口
+    <dependency>
+  		<groupId>com.yu</groupId>
+  		<artifactId>dubbo.provider.api</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	项目依赖 -->
+  	
   </dependencies>
   <build>
     <finalName>dubbo.provider</finalName>
